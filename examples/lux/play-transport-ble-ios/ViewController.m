@@ -13,9 +13,13 @@
 @interface ViewController () <UniversalBleDelegate, UITextViewDelegate>
 
 @property (nonatomic, strong) UniversalBle * UniversalBle;
-@property (nonatomic, weak) IBOutlet UILabel *stateLabel;
-@property (nonatomic, weak) IBOutlet UILabel *debugLabel;
-@property (nonatomic, weak) IBOutlet UILabel *luxValueLabel;
+
+@property (nonatomic, weak) IBOutlet UIView * disconnectedView;
+@property (nonatomic, weak) IBOutlet UIView * disconnectedMessageLabel;
+@property (nonatomic, weak) IBOutlet UIView * connectingView;
+@property (nonatomic, weak) IBOutlet UIView * connectedView;
+@property (nonatomic, weak) IBOutlet UILabel * luxLabel;
+
 @end
 
 @implementation ViewController
@@ -23,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.stateLabel.text = @"NOT CONNECTED";
+    [self showDisconnectedView];
     
     self.UniversalBle = [[UniversalBle alloc] init];
     self.UniversalBle.delegate = self;
@@ -38,32 +42,114 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
+- (void)showDisconnectedView
+{
+    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        
+        self.disconnectedView.alpha = 1.0;
+        self.connectingView.alpha = 0.0;
+        self.connectedView.alpha = 0.0;
+        
+    } completion:^(BOOL finished) {
+        // ...
+    }];
+    
+    [UIView animateWithDuration:0.5 delay:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        
+        self.disconnectedMessageLabel.alpha = 1.0;
+        
+    } completion:^(BOOL finished) {
+        // ...
+    }];
+}
+
+- (void)showConnectingView
+{
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        
+        self.disconnectedMessageLabel.alpha = 0.0;
+        
+    } completion:^(BOOL finished) {
+        // ...
+    }];
+    
+    [UIView animateWithDuration:0.5 delay:0.05 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        
+        self.disconnectedView.alpha = 0.0;
+        self.connectingView.alpha = 0.0;
+        self.connectedView.alpha = 0.0;
+        
+    } completion:^(BOOL finished) {
+        // ...
+    }];
+    
+    [UIView animateWithDuration:0.5 delay:0.65 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        
+        self.disconnectedView.alpha = 0.0;
+        self.connectingView.alpha = 1.0;
+        self.connectedView.alpha = 0.0;
+        
+    } completion:^(BOOL finished) {
+        // ...
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self showConnectedView];
+    });
+}
+
+- (void)showConnectedView
+{
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        
+        self.disconnectedView.alpha = 0.0;
+        self.connectingView.alpha = 0.0;
+        self.connectedView.alpha = 0.0;
+        
+    } completion:^(BOOL finished) {
+        // ...
+    }];
+    
+    [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        
+        self.disconnectedView.alpha = 0.0;
+        self.connectingView.alpha = 0.0;
+        self.connectedView.alpha = 1.0;
+        
+    } completion:^(BOOL finished) {
+        // ...
+    }];
+}
+
 #pragma mark -
 #pragma mark UniversalBleDelegate
 
 - (void)UniversalBleDidConnect:(UniversalBle *)UniversalBle
 {
-    self.stateLabel.text = @"CONNECTED";
+    [self showConnectingView];
 }
 
 - (void)UniversalBleDidDisconnect:(UniversalBle *)UniversalBle
 {
-    self.stateLabel.text = @"NOT CONNECTED";
+    [self showDisconnectedView];
 }
 
 - (void)UniversalBle:(UniversalBle *)UniversalBle didReceiveObject:(NSDictionary *)object
 {
     NSNumber * luxValue = object[@"lux"];
     if (luxValue) {
-        self.luxValueLabel.text = [NSString stringWithFormat:@"%f lux", luxValue.floatValue];
+        self.luxLabel.text = [NSString stringWithFormat:@"%.0f lx", luxValue.floatValue];
     }
 }
 
 - (void)UniversalBle:(UniversalBle *)UniversalBle didUpdateRSSI:(NSNumber *)RSSI
 {
     NSLog(@"UniversalBle:didUpdateRSSI: %@", RSSI);
-    
-    self.debugLabel.text = [NSString stringWithFormat:@"RSSI (%.1f dB)", RSSI.floatValue];
 }
 
 @end
