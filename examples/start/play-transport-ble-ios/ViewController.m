@@ -13,9 +13,9 @@
 @interface ViewController () <UniversalBleDelegate, UITextViewDelegate>
 
 @property (nonatomic, strong) UniversalBle * UniversalBle;
-@property (nonatomic, weak) IBOutlet UITextView *textView;
+@property (nonatomic, weak) IBOutlet UILabel *stateLabel;
 @property (nonatomic, weak) IBOutlet UILabel *debugLabel;
-
+@property (nonatomic, weak) IBOutlet UILabel *pongLabel;
 @end
 
 @implementation ViewController
@@ -23,8 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.textView.text = @"NOT\nCONNECTED";
-    self.textView.editable = NO;
+    self.stateLabel.text = @"NOT CONNECTED";
     
     self.UniversalBle = [[UniversalBle alloc] init];
     self.UniversalBle.delegate = self;
@@ -44,24 +43,25 @@
 
 - (void)UniversalBleDidConnect:(UniversalBle *)UniversalBle
 {
-    self.textView.text = @"CONNECTED";
-    self.textView.editable = YES;
+    self.stateLabel.text = @"CONNECTED";
 }
 
 - (void)UniversalBleDidDisconnect:(UniversalBle *)UniversalBle
 {
-    self.textView.text = @"NOT\nCONNECTED";
-    self.textView.editable = NO;
+    self.stateLabel.text = @"NOT CONNECTED";
 }
 
 - (void)UniversalBle:(UniversalBle *)UniversalBle didReceiveObject:(NSDictionary *)object
 {
-    NSDictionary * message = object[@"message"];
-    if (message) {
-        NSString * text = message[@"text"];
-        self.textView.text = text;
+    NSString * text = object[@"msg"];
+    if (text) {
+        self.pongLabel.text = text;
+        self.pongLabel.alpha = 1.0;
+        [UIView animateWithDuration:1.0 animations:^{
+            self.pongLabel.alpha = 0.0f;
+        }];
     } else {
-        self.textView.text = [NSString stringWithFormat:@"Object: %@", [object description]];
+        self.pongLabel.text = [NSString stringWithFormat:@"Object: %@", [object description]];
     }
 }
 
@@ -75,12 +75,12 @@
 #pragma mark -
 #pragma mark UITextViewDelegate
 
-- (void)textViewDidChange:(UITextView *)textView {
-    [textView setText:[[textView text] uppercaseString]];
+- (IBAction)ping:(id)sender {
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.UniversalBle sendObject:@{@"type":@"message",@"message":@{@"text":textView.text, @"from":@"mac"}}];
+//    });
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.UniversalBle sendObject:@{@"type":@"message",@"message":@{@"text":textView.text, @"from":@"mac"}}];
-    });
+    [self.UniversalBle sendObject:@{@"msg":@"ping"}];
 }
 
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,42 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Usp-lB-B6a">
-                                <rect key="frame" x="20" y="20" width="560" height="580"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="72"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SMV-Cw-WZe"/>
-                                </connections>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSSI" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilu-fH-Z3r" userLabel="Debug Label">
-                                <rect key="frame" x="490" y="30" width="100" height="15"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSSI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilu-fH-Z3r" userLabel="Debug Label">
+                                <rect key="frame" x="20" y="50" width="200" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="uaR-Ad-py6"/>
+                                    <constraint firstAttribute="width" constant="200" id="uaR-Ad-py6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BO-qL-HM0" userLabel="State Label">
+                                <rect key="frame" x="20" y="20" width="200" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6rF-gS-70E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s34-iR-D9p">
+                                <rect key="frame" x="284" y="81" width="31" height="30"/>
+                                <state key="normal" title="Ping"/>
+                                <connections>
+                                    <action selector="ping:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vV9-Rl-Ggn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pong" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4K-gT-j2A">
+                                <rect key="frame" x="269.5" y="196" width="61" height="32.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Usp-lB-B6a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ogu-hO-GRN"/>
-                            <constraint firstItem="Usp-lB-B6a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YfJ-JV-lgS"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Usp-lB-B6a" secondAttribute="bottom" id="hl7-k1-6w7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ilu-fH-Z3r" secondAttribute="trailing" constant="-10" id="o3O-L8-TS0"/>
-                            <constraint firstItem="Ilu-fH-Z3r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="q3v-SY-vzg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Usp-lB-B6a" secondAttribute="trailing" id="r4B-ko-CHU"/>
+                            <constraint firstItem="s34-iR-D9p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HP4-Kb-P3C"/>
+                            <constraint firstItem="Ilu-fH-Z3r" firstAttribute="leading" secondItem="8BO-qL-HM0" secondAttribute="leading" id="Hli-0W-bM6"/>
+                            <constraint firstItem="8BO-qL-HM0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IcH-K6-BEM"/>
+                            <constraint firstItem="Ilu-fH-Z3r" firstAttribute="top" secondItem="8BO-qL-HM0" secondAttribute="bottom" constant="7" id="L3g-iT-QSi"/>
+                            <constraint firstItem="s34-iR-D9p" firstAttribute="top" secondItem="8BO-qL-HM0" secondAttribute="bottom" constant="38" id="eHA-KP-uYb"/>
+                            <constraint firstItem="Z4K-gT-j2A" firstAttribute="top" secondItem="s34-iR-D9p" secondAttribute="bottom" constant="85" id="kVx-pe-jsj"/>
+                            <constraint firstItem="Z4K-gT-j2A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rSL-g6-r4U"/>
+                            <constraint firstItem="8BO-qL-HM0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="u6v-el-wWQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="debugLabel" destination="Ilu-fH-Z3r" id="2mn-fZ-rM1"/>
-                        <outlet property="textView" destination="Usp-lB-B6a" id="D4W-LN-emD"/>
+                        <outlet property="pongLabel" destination="Z4K-gT-j2A" id="Cin-AU-bdW"/>
+                        <outlet property="stateLabel" destination="8BO-qL-HM0" id="i3S-90-xxK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

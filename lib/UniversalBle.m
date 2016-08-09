@@ -73,10 +73,11 @@
 {
     NSLog(@"sendData: %@", data);
     
-    if (self.peripheral && self.mutableTxCharacteristic) { // Act as peripheral
-        [self.peripheral writeValue:data forCharacteristic:self.txCharacteristic type:CBCharacteristicWriteWithResponse];
+    if (self.peripheral && self.mutableRxCharacteristic) { // Act as central
+        // IMPORTANT use the RX characteristic of peripheral
+        [self.peripheral writeValue:data forCharacteristic:self.rxCharacteristic type:CBCharacteristicWriteWithResponse];
         
-    } else if (self.txCharacteristic) { // Act as central
+    } else if (self.txCharacteristic) { // Act as peripheral
         [self.peripheralManager updateValue:data forCharacteristic:self.mutableTxCharacteristic onSubscribedCentrals:nil];
     }
 }
@@ -310,9 +311,6 @@
             
             self.rxCharacteristic = characteristic;
             
-            // If it is, subscribe to it
-            [peripheral setNotifyValue:YES forCharacteristic:characteristic];
-            
             self.mutableRxCharacteristic = characteristic;
             
             if (self.txCharacteristic) {
@@ -324,6 +322,11 @@
             
             self.txCharacteristic = characteristic;
             self.mutableTxCharacteristic = characteristic;
+            
+            // ACT AS CENTRAL
+            // Relative to PERIPHERAL - Subscribe to TX - If it is, subscribe to it
+            // Peripheral's TX is our RX
+            [peripheral setNotifyValue:YES forCharacteristic:characteristic];
             
             if (self.rxCharacteristic) {
                 [self didConnect];
