@@ -14,6 +14,7 @@
 		3819B8E31E085800000CC706 /* UniversalBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3819B8CC1E08576D000CC706 /* UniversalBluetooth.framework */; };
 		3819B90C1E085EBA000CC706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3819B9081E085EBA000CC706 /* LaunchScreen.storyboard */; };
 		3819B90D1E085EBA000CC706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3819B90A1E085EBA000CC706 /* Main.storyboard */; };
+		3819B9121E086CC1000CC706 /* UniversalBluetooth.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3819B8CC1E08576D000CC706 /* UniversalBluetooth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,19 @@
 			remoteInfo = UniversalBluetooth;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3819B9111E086CAA000CC706 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3819B9121E086CC1000CC706 /* UniversalBluetooth.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		219A94911BE9171C006610AE /* universal-bluetooth-ios-start-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "universal-bluetooth-ios-start-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +141,7 @@
 				219A948D1BE9171C006610AE /* Sources */,
 				219A948E1BE9171C006610AE /* Frameworks */,
 				219A948F1BE9171C006610AE /* Resources */,
+				3819B9111E086CAA000CC706 /* CopyFiles */,
 			);
 			buildRules = (
 			);

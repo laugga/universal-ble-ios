@@ -55,11 +55,9 @@
 
 - (void)UniversalBluetooth:(UniversalBluetooth *)UniversalBluetooth didReceiveObject:(NSDictionary *)object
 {
-    NSString * text = object[@"msg"];
-    
-    if (text)
+    if ([object[@"type"] isEqualToString:@"message"])
     {
-        self.textView.text = text;
+        self.textView.text = object[@"message"][@"text"];
     }
 }
 
@@ -68,7 +66,7 @@
 
 - (void)textViewDidChange:(UITextView *)textView
 {
-    [self.UniversalBluetooth sendObject:@{@"msg":self.textView.text}];
+    [self.UniversalBluetooth sendObject:@{@"type":@"message",@"message":@{@"text":textView.text, @"from":@"iphone"}}];
 }
 
 
