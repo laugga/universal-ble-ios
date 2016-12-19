@@ -1,6 +1,6 @@
 //
 //  main.m
-//  play-transport-ble-ios
+//  UniversalBluetooth
 //
 //  Created by Luis Laugga on 03.11.15.
 //  Copyright © 2015 Luis Laugga. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  play-transport-ble-ios
+//  UniversalBluetooth
 //
 //  Created by Luis Laugga on 03.11.15.
 //  Copyright © 2015 Luis Laugga. All rights reserved.
@@ -13,17 +13,19 @@
 @interface ViewController () <UniversalBluetoothDelegate, UITextViewDelegate>
 
 @property (nonatomic, strong) UniversalBluetooth * UniversalBluetooth;
-@property (nonatomic, weak) IBOutlet UILabel *stateLabel;
-@property (nonatomic, weak) IBOutlet UILabel *debugLabel;
-@property (nonatomic, weak) IBOutlet UILabel *pongLabel;
+
+@property (nonatomic, weak) IBOutlet UITextView * textView;
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    self.stateLabel.text = @"NOT CONNECTED";
+    self.textView.text = @"Not connected. Bring the other device closer...";
+    self.textView.delegate = self;
     
     self.UniversalBluetooth = [[UniversalBluetooth alloc] init];
     self.UniversalBluetooth.delegate = self;
@@ -33,54 +35,40 @@
     });
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark -
 #pragma mark UniversalBluetoothDelegate
 
 - (void)UniversalBluetoothDidConnect:(UniversalBluetooth *)UniversalBluetooth
 {
-    self.stateLabel.text = @"CONNECTED";
+    self.textView.text = @"Connected :)";
 }
 
 - (void)UniversalBluetoothDidDisconnect:(UniversalBluetooth *)UniversalBluetooth
 {
-    self.stateLabel.text = @"NOT CONNECTED";
-}
-
-- (void)UniversalBluetooth:(UniversalBluetooth *)UniversalBluetooth didReceiveObject:(NSDictionary *)object
-{
-    NSString * text = object[@"msg"];
-    if (text) {
-        self.pongLabel.text = text;
-        self.pongLabel.alpha = 1.0;
-        [UIView animateWithDuration:1.0 animations:^{
-            self.pongLabel.alpha = 0.0f;
-        }];
-    } else {
-        self.pongLabel.text = [NSString stringWithFormat:@"Object: %@", [object description]];
-    }
+    self.textView.text = @"Not connected. Bring the other device closer...";
 }
 
 - (void)UniversalBluetooth:(UniversalBluetooth *)UniversalBluetooth didUpdateRSSI:(NSNumber *)RSSI
 {
     NSLog(@"UniversalBluetooth:didUpdateRSSI: %@", RSSI);
+}
+
+- (void)UniversalBluetooth:(UniversalBluetooth *)UniversalBluetooth didReceiveObject:(NSDictionary *)object
+{
+    NSString * text = object[@"msg"];
     
-    self.debugLabel.text = [NSString stringWithFormat:@"RSSI (%.1f dB)", RSSI.floatValue];
+    if (text)
+    {
+        self.textView.text = text;
+    }
 }
 
 #pragma mark -
 #pragma mark UITextViewDelegate
 
-- (IBAction)ping:(id)sender {
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [self.UniversalBluetooth sendObject:@{@"type":@"message",@"message":@{@"text":textView.text, @"from":@"mac"}}];
-//    });
-    
-    [self.UniversalBluetooth sendObject:@{@"msg":@"ping"}];
+- (void)textViewDidChange:(UITextView *)textView
+{
+    [self.UniversalBluetooth sendObject:@{@"msg":self.textView.text}];
 }
 
 

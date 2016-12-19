@@ -11,9 +11,9 @@
 		3819B8D81E085796000CC706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3819B8D11E085796000CC706 /* Assets.xcassets */; };
 		3819B8DB1E085796000CC706 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819B8D41E085796000CC706 /* main.m */; };
 		3819B8DC1E085796000CC706 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819B8D61E085796000CC706 /* ViewController.m */; };
-		3819B8DF1E0857D5000CC706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3819B8DD1E0857D5000CC706 /* LaunchScreen.storyboard */; };
-		3819B8E01E0857D5000CC706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3819B8DE1E0857D5000CC706 /* Main.storyboard */; };
 		3819B8E31E085800000CC706 /* UniversalBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3819B8CC1E08576D000CC706 /* UniversalBluetooth.framework */; };
+		3819B90C1E085EBA000CC706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3819B9081E085EBA000CC706 /* LaunchScreen.storyboard */; };
+		3819B90D1E085EBA000CC706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3819B90A1E085EBA000CC706 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +50,8 @@
 		3819B8D41E085796000CC706 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "universal-bluetooth-ios-start-example/main.m"; sourceTree = SOURCE_ROOT; };
 		3819B8D51E085796000CC706 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "universal-bluetooth-ios-start-example/ViewController.h"; sourceTree = SOURCE_ROOT; };
 		3819B8D61E085796000CC706 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "universal-bluetooth-ios-start-example/ViewController.m"; sourceTree = SOURCE_ROOT; };
-		3819B8DD1E0857D5000CC706 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "../universal-bluetooth-ios-start-example/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
-		3819B8DE1E0857D5000CC706 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "../universal-bluetooth-ios-start-example/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		3819B9091E085EBA000CC706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "universal-bluetooth-ios-start-example/Base.lproj/LaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
+		3819B90B1E085EBA000CC706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "universal-bluetooth-ios-start-example/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +73,9 @@
 				3819B8D01E085796000CC706 /* AppDelegate.m */,
 				3819B8D51E085796000CC706 /* ViewController.h */,
 				3819B8D61E085796000CC706 /* ViewController.m */,
-				3819B8DD1E0857D5000CC706 /* LaunchScreen.storyboard */,
+				3819B9081E085EBA000CC706 /* LaunchScreen.storyboard */,
+				3819B90A1E085EBA000CC706 /* Main.storyboard */,
 				3819B8D11E085796000CC706 /* Assets.xcassets */,
-				3819B8DE1E0857D5000CC706 /* Main.storyboard */,
 				3819B8D31E085796000CC706 /* Info.plist */,
 				219A94931BE9171C006610AE /* Supporting Files */,
 			);
@@ -199,8 +199,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3819B8E01E0857D5000CC706 /* Main.storyboard in Resources */,
-				3819B8DF1E0857D5000CC706 /* LaunchScreen.storyboard in Resources */,
+				3819B90D1E085EBA000CC706 /* Main.storyboard in Resources */,
+				3819B90C1E085EBA000CC706 /* LaunchScreen.storyboard in Resources */,
 				3819B8D81E085796000CC706 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +227,25 @@
 			targetProxy = 3819B8E11E0857FC000CC706 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3819B9081E085EBA000CC706 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3819B9091E085EBA000CC706 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3819B90A1E085EBA000CC706 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3819B90B1E085EBA000CC706 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		219A94B11BE9171D006610AE /* Debug */ = {
