@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3819B8B21E085679000CC706 /* UniversalBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3819B8A91E085679000CC706 /* UniversalBluetooth.framework */; };
+		3819B8E41E085832000CC706 /* UniversalBluetooth.h in Headers */ = {isa = PBXBuildFile; fileRef = 3819B8A01E08557B000CC706 /* UniversalBluetooth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3819B8E61E08599A000CC706 /* UniversalBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819B8A11E08557B000CC706 /* UniversalBluetooth.m */; };
+		3819B8E71E0859B6000CC706 /* NSArray+MessagePack.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610EAF1D59F2B500569851 /* NSArray+MessagePack.h */; };
+		3819B8E81E0859B6000CC706 /* NSArray+MessagePack.m in Sources */ = {isa = PBXBuildFile; fileRef = 38610EB01D59F2B500569851 /* NSArray+MessagePack.m */; };
+		3819B8E91E0859B6000CC706 /* NSData+MessagePack.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610EB11D59F2B500569851 /* NSData+MessagePack.h */; };
+		3819B8EA1E0859B6000CC706 /* NSData+MessagePack.m in Sources */ = {isa = PBXBuildFile; fileRef = 38610EB21D59F2B500569851 /* NSData+MessagePack.m */; };
+		3819B8EB1E0859B6000CC706 /* NSDictionary+MessagePack.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610EB31D59F2B500569851 /* NSDictionary+MessagePack.h */; };
+		3819B8EC1E0859B6000CC706 /* NSDictionary+MessagePack.m in Sources */ = {isa = PBXBuildFile; fileRef = 38610EB41D59F2B500569851 /* NSDictionary+MessagePack.m */; };
+		3819B8ED1E0859B6000CC706 /* MessagePack.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610EA71D59F2B500569851 /* MessagePack.h */; };
+		3819B8EE1E0859B6000CC706 /* MessagePackPacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610EA81D59F2B500569851 /* MessagePackPacker.h */; };
+		3819B8EF1E0859B6000CC706 /* MessagePackPacker.m in Sources */ = {isa = PBXBuildFile; fileRef = 38610EA91D59F2B500569851 /* MessagePackPacker.m */; };
+		3819B8F01E0859B6000CC706 /* MessagePackParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610EAA1D59F2B500569851 /* MessagePackParser.h */; };
+		3819B8F11E0859B6000CC706 /* MessagePackParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 38610EAB1D59F2B500569851 /* MessagePackParser.m */; };
+		3819B8F21E0859B6000CC706 /* MessagePackParser+Streaming.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610EAC1D59F2B500569851 /* MessagePackParser+Streaming.h */; };
+		3819B8F31E0859B6000CC706 /* MessagePackParser+Streaming.m in Sources */ = {isa = PBXBuildFile; fileRef = 38610EAD1D59F2B500569851 /* MessagePackParser+Streaming.m */; };
+		3819B8F41E0859BB000CC706 /* object.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610ED01D59F2F900569851 /* object.h */; };
+		3819B8F51E0859BB000CC706 /* pack_define.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610ED11D59F2F900569851 /* pack_define.h */; };
+		3819B8F61E0859BB000CC706 /* pack_template.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610ED21D59F2F900569851 /* pack_template.h */; };
+		3819B8F71E0859BB000CC706 /* pack.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610ED31D59F2F900569851 /* pack.h */; };
+		3819B8F81E0859BB000CC706 /* sbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610ED41D59F2F900569851 /* sbuffer.h */; };
+		3819B8F91E0859BB000CC706 /* sysdep.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610ED51D59F2F900569851 /* sysdep.h */; };
+		3819B8FA1E0859BB000CC706 /* unpack_define.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610ED61D59F2F900569851 /* unpack_define.h */; };
+		3819B8FB1E0859BB000CC706 /* unpack_template.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610ED71D59F2F900569851 /* unpack_template.h */; };
+		3819B8FC1E0859BB000CC706 /* unpack.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610ED81D59F2F900569851 /* unpack.h */; };
+		3819B8FD1E0859BB000CC706 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610ED91D59F2F900569851 /* version.h */; };
+		3819B8FE1E0859BB000CC706 /* vrefbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610EDA1D59F2F900569851 /* vrefbuffer.h */; };
+		3819B8FF1E0859BB000CC706 /* zbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610EDB1D59F2F900569851 /* zbuffer.h */; };
+		3819B9001E0859BB000CC706 /* zone.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610EDC1D59F2F900569851 /* zone.h */; };
+		3819B9011E0859BB000CC706 /* msgpack.h in Headers */ = {isa = PBXBuildFile; fileRef = 38610EC41D59F2EB00569851 /* msgpack.h */; };
+		3819B9021E0859BB000CC706 /* objectc.c in Sources */ = {isa = PBXBuildFile; fileRef = 38610EC51D59F2EB00569851 /* objectc.c */; };
+		3819B9031E0859BB000CC706 /* unpack.c in Sources */ = {isa = PBXBuildFile; fileRef = 38610EC61D59F2EB00569851 /* unpack.c */; };
+		3819B9041E0859BB000CC706 /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = 38610EC71D59F2EB00569851 /* version.c */; };
+		3819B9051E0859BB000CC706 /* vrefbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 38610EC81D59F2EB00569851 /* vrefbuffer.c */; };
+		3819B9061E0859BB000CC706 /* zone.c in Sources */ = {isa = PBXBuildFile; fileRef = 38610EC91D59F2EB00569851 /* zone.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3819B8B31E085679000CC706 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A06ACB1C1608B2C200E20441 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3819B8A81E085679000CC706;
+			remoteInfo = UniversalBluetooth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3819B8A01E08557B000CC706 /* UniversalBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UniversalBluetooth.h; path = "deps/universal-bluetooth-macos/lib/UniversalBluetooth.h"; sourceTree = SOURCE_ROOT; };
+		3819B8A11E08557B000CC706 /* UniversalBluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UniversalBluetooth.m; path = "deps/universal-bluetooth-macos/lib/UniversalBluetooth.m"; sourceTree = SOURCE_ROOT; };
+		3819B8A91E085679000CC706 /* UniversalBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UniversalBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3819B8B11E085679000CC706 /* Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3819B8C01E08569C000CC706 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = support/Info.plist; sourceTree = "<group>"; };
+		3819B8C11E08569C000CC706 /* UniversalBluetooth-iOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UniversalBluetooth-iOS-Prefix.pch"; path = "support/UniversalBluetooth-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		38610EA71D59F2B500569851 /* MessagePack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessagePack.h; path = "deps/msgpack-objectivec/MessagePack.h"; sourceTree = "<group>"; };
+		38610EA81D59F2B500569851 /* MessagePackPacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessagePackPacker.h; path = "deps/msgpack-objectivec/MessagePackPacker.h"; sourceTree = "<group>"; };
+		38610EA91D59F2B500569851 /* MessagePackPacker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessagePackPacker.m; path = "deps/msgpack-objectivec/MessagePackPacker.m"; sourceTree = "<group>"; };
+		38610EAA1D59F2B500569851 /* MessagePackParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessagePackParser.h; path = "deps/msgpack-objectivec/MessagePackParser.h"; sourceTree = "<group>"; };
+		38610EAB1D59F2B500569851 /* MessagePackParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessagePackParser.m; path = "deps/msgpack-objectivec/MessagePackParser.m"; sourceTree = "<group>"; };
+		38610EAC1D59F2B500569851 /* MessagePackParser+Streaming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MessagePackParser+Streaming.h"; path = "deps/msgpack-objectivec/MessagePackParser+Streaming.h"; sourceTree = "<group>"; };
+		38610EAD1D59F2B500569851 /* MessagePackParser+Streaming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MessagePackParser+Streaming.m"; path = "deps/msgpack-objectivec/MessagePackParser+Streaming.m"; sourceTree = "<group>"; };
+		38610EAF1D59F2B500569851 /* NSArray+MessagePack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+MessagePack.h"; path = "deps/msgpack-objectivec/NSArray+MessagePack.h"; sourceTree = "<group>"; };
+		38610EB01D59F2B500569851 /* NSArray+MessagePack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MessagePack.m"; path = "deps/msgpack-objectivec/NSArray+MessagePack.m"; sourceTree = "<group>"; };
+		38610EB11D59F2B500569851 /* NSData+MessagePack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+MessagePack.h"; path = "deps/msgpack-objectivec/NSData+MessagePack.h"; sourceTree = "<group>"; };
+		38610EB21D59F2B500569851 /* NSData+MessagePack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+MessagePack.m"; path = "deps/msgpack-objectivec/NSData+MessagePack.m"; sourceTree = "<group>"; };
+		38610EB31D59F2B500569851 /* NSDictionary+MessagePack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MessagePack.h"; path = "deps/msgpack-objectivec/NSDictionary+MessagePack.h"; sourceTree = "<group>"; };
+		38610EB41D59F2B500569851 /* NSDictionary+MessagePack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MessagePack.m"; path = "deps/msgpack-objectivec/NSDictionary+MessagePack.m"; sourceTree = "<group>"; };
+		38610EC41D59F2EB00569851 /* msgpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = msgpack.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack.h"; sourceTree = "<group>"; };
+		38610EC51D59F2EB00569851 /* objectc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = objectc.c; path = "deps/msgpack-objectivec/msgpack_src/objectc.c"; sourceTree = "<group>"; };
+		38610EC61D59F2EB00569851 /* unpack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = unpack.c; path = "deps/msgpack-objectivec/msgpack_src/unpack.c"; sourceTree = "<group>"; };
+		38610EC71D59F2EB00569851 /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = version.c; path = "deps/msgpack-objectivec/msgpack_src/version.c"; sourceTree = "<group>"; };
+		38610EC81D59F2EB00569851 /* vrefbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vrefbuffer.c; path = "deps/msgpack-objectivec/msgpack_src/vrefbuffer.c"; sourceTree = "<group>"; };
+		38610EC91D59F2EB00569851 /* zone.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zone.c; path = "deps/msgpack-objectivec/msgpack_src/zone.c"; sourceTree = "<group>"; };
+		38610ED01D59F2F900569851 /* object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = object.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/object.h"; sourceTree = "<group>"; };
+		38610ED11D59F2F900569851 /* pack_define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pack_define.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/pack_define.h"; sourceTree = "<group>"; };
+		38610ED21D59F2F900569851 /* pack_template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pack_template.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/pack_template.h"; sourceTree = "<group>"; };
+		38610ED31D59F2F900569851 /* pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pack.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/pack.h"; sourceTree = "<group>"; };
+		38610ED41D59F2F900569851 /* sbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sbuffer.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/sbuffer.h"; sourceTree = "<group>"; };
+		38610ED51D59F2F900569851 /* sysdep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sysdep.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/sysdep.h"; sourceTree = "<group>"; };
+		38610ED61D59F2F900569851 /* unpack_define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unpack_define.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/unpack_define.h"; sourceTree = "<group>"; };
+		38610ED71D59F2F900569851 /* unpack_template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unpack_template.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/unpack_template.h"; sourceTree = "<group>"; };
+		38610ED81D59F2F900569851 /* unpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unpack.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/unpack.h"; sourceTree = "<group>"; };
+		38610ED91D59F2F900569851 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/version.h"; sourceTree = "<group>"; };
+		38610EDA1D59F2F900569851 /* vrefbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vrefbuffer.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/vrefbuffer.h"; sourceTree = "<group>"; };
+		38610EDB1D59F2F900569851 /* zbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zbuffer.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/zbuffer.h"; sourceTree = "<group>"; };
+		38610EDC1D59F2F900569851 /* zone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zone.h; path = "deps/msgpack-objectivec/msgpack_src/msgpack/zone.h"; sourceTree = "<group>"; };
+		38E212851D324EBC00AAE5F6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		A01C02411620D9BA003DA76F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		A06ACB291608B2C300E20441 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A06ACB2B1608B2C300E20441 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A06ACB2D1608B2C300E20441 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3819B8A51E085679000CC706 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3819B8AE1E085679000CC706 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3819B8B21E085679000CC706 /* UniversalBluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38610EA61D59F28400569851 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				38610EC21D59F2C200569851 /* msgpack-objectivec */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		38610EC21D59F2C200569851 /* msgpack-objectivec */ = {
+			isa = PBXGroup;
+			children = (
+				38610EC31D59F2D700569851 /* msgpack-c */,
+				38610EAF1D59F2B500569851 /* NSArray+MessagePack.h */,
+				38610EB01D59F2B500569851 /* NSArray+MessagePack.m */,
+				38610EB11D59F2B500569851 /* NSData+MessagePack.h */,
+				38610EB21D59F2B500569851 /* NSData+MessagePack.m */,
+				38610EB31D59F2B500569851 /* NSDictionary+MessagePack.h */,
+				38610EB41D59F2B500569851 /* NSDictionary+MessagePack.m */,
+				38610EA71D59F2B500569851 /* MessagePack.h */,
+				38610EA81D59F2B500569851 /* MessagePackPacker.h */,
+				38610EA91D59F2B500569851 /* MessagePackPacker.m */,
+				38610EAA1D59F2B500569851 /* MessagePackParser.h */,
+				38610EAB1D59F2B500569851 /* MessagePackParser.m */,
+				38610EAC1D59F2B500569851 /* MessagePackParser+Streaming.h */,
+				38610EAD1D59F2B500569851 /* MessagePackParser+Streaming.m */,
+			);
+			name = "msgpack-objectivec";
+			sourceTree = "<group>";
+		};
+		38610EC31D59F2D700569851 /* msgpack-c */ = {
+			isa = PBXGroup;
+			children = (
+				38610ED01D59F2F900569851 /* object.h */,
+				38610ED11D59F2F900569851 /* pack_define.h */,
+				38610ED21D59F2F900569851 /* pack_template.h */,
+				38610ED31D59F2F900569851 /* pack.h */,
+				38610ED41D59F2F900569851 /* sbuffer.h */,
+				38610ED51D59F2F900569851 /* sysdep.h */,
+				38610ED61D59F2F900569851 /* unpack_define.h */,
+				38610ED71D59F2F900569851 /* unpack_template.h */,
+				38610ED81D59F2F900569851 /* unpack.h */,
+				38610ED91D59F2F900569851 /* version.h */,
+				38610EDA1D59F2F900569851 /* vrefbuffer.h */,
+				38610EDB1D59F2F900569851 /* zbuffer.h */,
+				38610EDC1D59F2F900569851 /* zone.h */,
+				38610EC41D59F2EB00569851 /* msgpack.h */,
+				38610EC51D59F2EB00569851 /* objectc.c */,
+				38610EC61D59F2EB00569851 /* unpack.c */,
+				38610EC71D59F2EB00569851 /* version.c */,
+				38610EC81D59F2EB00569851 /* vrefbuffer.c */,
+				38610EC91D59F2EB00569851 /* zone.c */,
+			);
+			name = "msgpack-c";
+			sourceTree = "<group>";
+		};
+		A01C02691620DF5E003DA76F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				3819B8C01E08569C000CC706 /* Info.plist */,
+				3819B8C11E08569C000CC706 /* UniversalBluetooth-iOS-Prefix.pch */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		A01C026A1620DF64003DA76F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A039A76D161F8C08009E4C10 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		A06ACB1A1608B2C200E20441 = {
+			isa = PBXGroup;
+			children = (
+				A0F0BE0516388E050017AEC3 /* Library */,
+				A01C026A1620DF64003DA76F /* Resources */,
+				A01C02691620DF5E003DA76F /* Support */,
+				A039A76D161F8C08009E4C10 /* Test */,
+				38610EA61D59F28400569851 /* Dependencies */,
+				A06ACB281608B2C300E20441 /* Frameworks */,
+				A06ACB261608B2C300E20441 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A06ACB261608B2C300E20441 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3819B8A91E085679000CC706 /* UniversalBluetooth.framework */,
+				3819B8B11E085679000CC706 /* Test.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A06ACB281608B2C300E20441 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38E212851D324EBC00AAE5F6 /* AVFoundation.framework */,
+				A06ACB291608B2C300E20441 /* UIKit.framework */,
+				A06ACB2B1608B2C300E20441 /* Foundation.framework */,
+				A06ACB2D1608B2C300E20441 /* CoreGraphics.framework */,
+				A01C02411620D9BA003DA76F /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0F0BE0516388E050017AEC3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3819B8A01E08557B000CC706 /* UniversalBluetooth.h */,
+				3819B8A11E08557B000CC706 /* UniversalBluetooth.m */,
+			);
+			name = Library;
+			path = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3819B8A61E085679000CC706 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3819B8F51E0859BB000CC706 /* pack_define.h in Headers */,
+				3819B8ED1E0859B6000CC706 /* MessagePack.h in Headers */,
+				3819B8F91E0859BB000CC706 /* sysdep.h in Headers */,
+				3819B8F41E0859BB000CC706 /* object.h in Headers */,
+				3819B8FB1E0859BB000CC706 /* unpack_template.h in Headers */,
+				3819B8F71E0859BB000CC706 /* pack.h in Headers */,
+				3819B8FA1E0859BB000CC706 /* unpack_define.h in Headers */,
+				3819B8F21E0859B6000CC706 /* MessagePackParser+Streaming.h in Headers */,
+				3819B8E71E0859B6000CC706 /* NSArray+MessagePack.h in Headers */,
+				3819B9011E0859BB000CC706 /* msgpack.h in Headers */,
+				3819B8F61E0859BB000CC706 /* pack_template.h in Headers */,
+				3819B8F81E0859BB000CC706 /* sbuffer.h in Headers */,
+				3819B8FF1E0859BB000CC706 /* zbuffer.h in Headers */,
+				3819B8FE1E0859BB000CC706 /* vrefbuffer.h in Headers */,
+				3819B8E91E0859B6000CC706 /* NSData+MessagePack.h in Headers */,
+				3819B8EE1E0859B6000CC706 /* MessagePackPacker.h in Headers */,
+				3819B8FD1E0859BB000CC706 /* version.h in Headers */,
+				3819B8EB1E0859B6000CC706 /* NSDictionary+MessagePack.h in Headers */,
+				3819B8E41E085832000CC706 /* UniversalBluetooth.h in Headers */,
+				3819B8F01E0859B6000CC706 /* MessagePackParser.h in Headers */,
+				3819B9001E0859BB000CC706 /* zone.h in Headers */,
+				3819B8FC1E0859BB000CC706 /* unpack.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3819B8A81E085679000CC706 /* UniversalBluetooth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3819B8BA1E085679000CC706 /* Build configuration list for PBXNativeTarget "UniversalBluetooth" */;
+			buildPhases = (
+				3819B8A41E085679000CC706 /* Sources */,
+				3819B8A51E085679000CC706 /* Frameworks */,
+				3819B8A61E085679000CC706 /* Headers */,
+				3819B8A71E085679000CC706 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UniversalBluetooth;
+			productName = UniversalBluetooth;
+			productReference = 3819B8A91E085679000CC706 /* UniversalBluetooth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3819B8B01E085679000CC706 /* Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3819B8BD1E085679000CC706 /* Build configuration list for PBXNativeTarget "Test" */;
+			buildPhases = (
+				3819B8AD1E085679000CC706 /* Sources */,
+				3819B8AE1E085679000CC706 /* Frameworks */,
+				3819B8AF1E085679000CC706 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3819B8B41E085679000CC706 /* PBXTargetDependency */,
+			);
+			name = Test;
+			productName = UniversalBluetoothTests;
+			productReference = 3819B8B11E085679000CC706 /* Test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A06ACB1C1608B2C200E20441 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastTestingUpgradeCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Luis Laugga";
+				TargetAttributes = {
+					3819B8A81E085679000CC706 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = JJC3QT2D2L;
+						ProvisioningStyle = Automatic;
+					};
+					3819B8B01E085679000CC706 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = JJC3QT2D2L;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A06ACB1F1608B2C200E20441 /* Build configuration list for PBXProject "universal-bluetooth-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A06ACB1A1608B2C200E20441;
+			productRefGroup = A06ACB261608B2C300E20441 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3819B8A81E085679000CC706 /* UniversalBluetooth */,
+				3819B8B01E085679000CC706 /* Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3819B8A71E085679000CC706 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3819B8AF1E085679000CC706 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3819B8A41E085679000CC706 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3819B9041E0859BB000CC706 /* version.c in Sources */,
+				3819B8E61E08599A000CC706 /* UniversalBluetooth.m in Sources */,
+				3819B8E81E0859B6000CC706 /* NSArray+MessagePack.m in Sources */,
+				3819B9061E0859BB000CC706 /* zone.c in Sources */,
+				3819B8EF1E0859B6000CC706 /* MessagePackPacker.m in Sources */,
+				3819B9031E0859BB000CC706 /* unpack.c in Sources */,
+				3819B8F31E0859B6000CC706 /* MessagePackParser+Streaming.m in Sources */,
+				3819B9021E0859BB000CC706 /* objectc.c in Sources */,
+				3819B8F11E0859B6000CC706 /* MessagePackParser.m in Sources */,
+				3819B8EA1E0859B6000CC706 /* NSData+MessagePack.m in Sources */,
+				3819B8EC1E0859B6000CC706 /* NSDictionary+MessagePack.m in Sources */,
+				3819B9051E0859BB000CC706 /* vrefbuffer.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3819B8AD1E085679000CC706 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3819B8B41E085679000CC706 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3819B8A81E085679000CC706 /* UniversalBluetooth */;
+			targetProxy = 3819B8B31E085679000CC706 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3819B8BB1E085679000CC706 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JJC3QT2D2L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = support/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laugga.UniversalBluetooth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3819B8BC1E085679000CC706 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JJC3QT2D2L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = support/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laugga.UniversalBluetooth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3819B8BE1E085679000CC706 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = JJC3QT2D2L;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = UniversalBluetoothTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laugga.UniversalBluetoothTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3819B8BF1E085679000CC706 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = JJC3QT2D2L;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = UniversalBluetoothTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laugga.UniversalBluetoothTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A06ACB441608B2C300E20441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "support/UniversalBluetooth-iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = YES;
+				INFOPLIST_FILE = "support/Universal-BLE-iOS-Info.plist";
+				INFOPLIST_OUTPUT_FORMAT = "same-as-input";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PLIST_FILE_OUTPUT_FORMAT = "same-as-input";
+				PRODUCT_BUNDLE_IDENTIFIER = co.coletiv.universal;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A06ACB451608B2C300E20441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "support/UniversalBluetooth-iOS-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = YES;
+				INFOPLIST_FILE = "support/Universal-BLE-iOS-Info.plist";
+				INFOPLIST_OUTPUT_FORMAT = "same-as-input";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PLIST_FILE_OUTPUT_FORMAT = "same-as-input";
+				PRODUCT_BUNDLE_IDENTIFIER = co.coletiv.universal;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3819B8BA1E085679000CC706 /* Build configuration list for PBXNativeTarget "UniversalBluetooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3819B8BB1E085679000CC706 /* Debug */,
+				3819B8BC1E085679000CC706 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3819B8BD1E085679000CC706 /* Build configuration list for PBXNativeTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3819B8BE1E085679000CC706 /* Debug */,
+				3819B8BF1E085679000CC706 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A06ACB1F1608B2C200E20441 /* Build configuration list for PBXProject "universal-bluetooth-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A06ACB441608B2C300E20441 /* Debug */,
+				A06ACB451608B2C300E20441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A06ACB1C1608B2C200E20441 /* Project object */;
+}
