@@ -15,6 +15,7 @@
 		3819B90C1E085EBA000CC706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3819B9081E085EBA000CC706 /* LaunchScreen.storyboard */; };
 		3819B90D1E085EBA000CC706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3819B90A1E085EBA000CC706 /* Main.storyboard */; };
 		3819B9121E086CC1000CC706 /* UniversalBluetooth.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3819B8CC1E08576D000CC706 /* UniversalBluetooth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38E6A3B41E0AFA390063D9E4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E6A3B21E0AFA390063D9E4 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		3819B8D61E085796000CC706 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "universal-bluetooth-ios-start-example/ViewController.m"; sourceTree = SOURCE_ROOT; };
 		3819B9091E085EBA000CC706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "universal-bluetooth-ios-start-example/Base.lproj/LaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
 		3819B90B1E085EBA000CC706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "universal-bluetooth-ios-start-example/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
+		38E6A3B31E0AFA390063D9E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "universal-bluetooth-ios-start-example/en.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				3819B8D01E085796000CC706 /* AppDelegate.m */,
 				3819B8D51E085796000CC706 /* ViewController.h */,
 				3819B8D61E085796000CC706 /* ViewController.m */,
+				38E6A3B21E0AFA390063D9E4 /* Localizable.strings */,
 				3819B9081E085EBA000CC706 /* LaunchScreen.storyboard */,
 				3819B90A1E085EBA000CC706 /* Main.storyboard */,
 				3819B8D11E085796000CC706 /* Assets.xcassets */,
@@ -214,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E6A3B41E0AFA390063D9E4 /* Localizable.strings in Resources */,
 				3819B90D1E085EBA000CC706 /* Main.storyboard in Resources */,
 				3819B90C1E085EBA000CC706 /* LaunchScreen.storyboard in Resources */,
 				3819B8D81E085796000CC706 /* Assets.xcassets in Resources */,
@@ -258,6 +262,14 @@
 				3819B90B1E085EBA000CC706 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38E6A3B21E0AFA390063D9E4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38E6A3B31E0AFA390063D9E4 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

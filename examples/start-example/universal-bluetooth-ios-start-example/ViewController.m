@@ -24,7 +24,7 @@
 {
     [super viewDidLoad];
     
-    self.textView.text = @"Not connected. Bring the other device closer...";
+    self.textView.text = NSLocalizedString(@"disconnected-info", nil);
     self.textView.delegate = self;
     
     self.UniversalBluetooth = [[UniversalBluetooth alloc] init];
@@ -40,12 +40,12 @@
 
 - (void)UniversalBluetoothDidConnect:(UniversalBluetooth *)UniversalBluetooth
 {
-    self.textView.text = @"Connected :)";
+    self.textView.text = NSLocalizedString(@"connected-info", nil);
 }
 
 - (void)UniversalBluetoothDidDisconnect:(UniversalBluetooth *)UniversalBluetooth
 {
-    self.textView.text = @"Not connected. Bring the other device closer...";
+    self.textView.text = NSLocalizedString(@"disconnected-info", nil);
 }
 
 - (void)UniversalBluetooth:(UniversalBluetooth *)UniversalBluetooth didUpdateRSSI:(NSNumber *)RSSI
