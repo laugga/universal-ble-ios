@@ -10,7 +10,7 @@ Initialize and start scanning:
 UniversalBluetooth * universal = [[UniversalBluetooth alloc] init];
 universal.delegate = self;
 
-[universal startScanning];
+[universal start];
 ```
 
 Implement the delegate method, required to receive objects:
