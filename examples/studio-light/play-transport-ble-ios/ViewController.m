@@ -18,7 +18,10 @@
 @property (nonatomic, weak) IBOutlet UIView * disconnectedMessageLabel;
 @property (nonatomic, weak) IBOutlet UIView * connectingView;
 @property (nonatomic, weak) IBOutlet UIView * connectedView;
-@property (nonatomic, weak) IBOutlet UILabel * luxLabel;
+@property (nonatomic, weak) IBOutlet UILabel * hueLabel;
+@property (nonatomic, weak) IBOutlet UILabel * valueLabel;
+@property (nonatomic, weak) IBOutlet UISlider * hueSlider;
+@property (nonatomic, weak) IBOutlet UISlider * valueSlider;
 
 @end
 
@@ -127,6 +130,35 @@
 }
 
 #pragma mark -
+#pragma mark Actions
+
+- (IBAction)didUpdateHue:(UISlider *)slider
+{
+    int hue = (int)slider.value;
+    self.hueLabel.text = [NSString stringWithFormat:@"h %d", hue];
+    
+    // Send HV
+    NSMutableDictionary * hv = [[NSMutableDictionary alloc] init];
+    hv[@"h"] = [[NSNumber alloc] initWithInt:hue];
+    int value = (int)self.valueSlider.value;
+    hv[@"v"] = [[NSNumber alloc] initWithInt:value];
+    [self.UniversalBluetooth sendObject:hv];
+}
+
+- (IBAction)didUpdateValue:(UISlider *)slider
+{
+    int value = (int)slider.value;
+    self.valueLabel.text = [NSString stringWithFormat:@"v %d", value];
+    
+    // Send HV
+    NSMutableDictionary * hv = [[NSMutableDictionary alloc] init];
+    hv[@"v"] = [[NSNumber alloc] initWithInt:value];
+    int hue = (int)self.hueSlider.value;
+    hv[@"h"] = [[NSNumber alloc] initWithInt:hue];
+    [self.UniversalBluetooth sendObject:hv];
+}
+
+#pragma mark -
 #pragma mark UniversalBluetoothDelegate
 
 - (void)UniversalBluetoothDidConnect:(UniversalBluetooth *)UniversalBluetooth
@@ -141,9 +173,19 @@
 
 - (void)UniversalBluetooth:(UniversalBluetooth *)UniversalBluetooth didReceiveObject:(NSDictionary *)object
 {
-    NSNumber * luxValue = object[@"lux"];
-    if (luxValue) {
-        self.luxLabel.text = [NSString stringWithFormat:@"%.0f lx", luxValue.floatValue];
+    NSNumber * hvHue = object[@"h"];
+    NSNumber * hvValue = object[@"v"];
+    
+    if (hvHue) {
+        int hue = hvHue.intValue;
+        self.hueLabel.text = [NSString stringWithFormat:@"h %d", hue];
+        self.hueSlider.value = (float)hue;
+    }
+    
+    if (hvValue) {
+        int value = hvValue.intValue;
+        self.valueLabel.text = [NSString stringWithFormat:@"v %d", value];
+        self.valueSlider.value = (float)value;
     }
 }
 

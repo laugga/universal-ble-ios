@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		219A94911BE9171C006610AE /* universal-ble-lux-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "universal-ble-lux-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		219A94911BE9171C006610AE /* studio-light.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "studio-light.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		219A94941BE9171C006610AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		219A94961BE9171C006610AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		219A94971BE9171C006610AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		21DE51531BE771B100ECCD0C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				219A94911BE9171C006610AE /* universal-ble-lux-ios.app */,
+				219A94911BE9171C006610AE /* studio-light.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,9 +122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		219A94901BE9171C006610AE /* universal-ble-lux-ios */ = {
+		219A94901BE9171C006610AE /* universal-ble-studio-light-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 219A94B01BE9171D006610AE /* Build configuration list for PBXNativeTarget "universal-ble-lux-ios" */;
+			buildConfigurationList = 219A94B01BE9171D006610AE /* Build configuration list for PBXNativeTarget "universal-ble-studio-light-ios" */;
 			buildPhases = (
 				219A948D1BE9171C006610AE /* Sources */,
 				219A948E1BE9171C006610AE /* Frameworks */,
@@ -135,9 +135,9 @@
 			dependencies = (
 				38437A3E1EC0B008008D078A /* PBXTargetDependency */,
 			);
-			name = "universal-ble-lux-ios";
+			name = "universal-ble-studio-light-ios";
 			productName = "play-transport-ble-ios";
-			productReference = 219A94911BE9171C006610AE /* universal-ble-lux-ios.app */;
+			productReference = 219A94911BE9171C006610AE /* studio-light.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -155,11 +155,12 @@
 					};
 				};
 			};
-			buildConfigurationList = 21DE514D1BE771B100ECCD0C /* Build configuration list for PBXProject "universal-ble-lux" */;
+			buildConfigurationList = 21DE514D1BE771B100ECCD0C /* Build configuration list for PBXProject "universal-ble-studio-light" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -174,7 +175,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				219A94901BE9171C006610AE /* universal-ble-lux-ios */,
+				219A94901BE9171C006610AE /* universal-ble-studio-light-ios */,
 			);
 		};
 /* End PBXProject section */
@@ -261,7 +262,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.laugga.universal-ble-ios-example-lux";
-				PRODUCT_NAME = "universal-ble-lux-ios";
+				PRODUCT_NAME = "studio-light";
 			};
 			name = Debug;
 		};
@@ -276,7 +277,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.laugga.universal-ble-ios-example-lux";
-				PRODUCT_NAME = "universal-ble-lux-ios";
+				PRODUCT_NAME = "studio-light";
 			};
 			name = Release;
 		};
@@ -365,7 +366,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		219A94B01BE9171D006610AE /* Build configuration list for PBXNativeTarget "universal-ble-lux-ios" */ = {
+		219A94B01BE9171D006610AE /* Build configuration list for PBXNativeTarget "universal-ble-studio-light-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				219A94B11BE9171D006610AE /* Debug */,
@@ -374,7 +375,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21DE514D1BE771B100ECCD0C /* Build configuration list for PBXProject "universal-ble-lux" */ = {
+		21DE514D1BE771B100ECCD0C /* Build configuration list for PBXProject "universal-ble-studio-light" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21DE51721BE771B200ECCD0C /* Debug */,
