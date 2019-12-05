@@ -18,6 +18,7 @@
 @property (nonatomic, weak) IBOutlet UIView * disconnectedMessageLabel;
 @property (nonatomic, weak) IBOutlet UIView * connectingView;
 @property (nonatomic, weak) IBOutlet UIView * connectedView;
+@property (nonatomic, weak) IBOutlet UILabel * connectCountLabel;
 @property (nonatomic, weak) IBOutlet UILabel * hueLabel;
 @property (nonatomic, weak) IBOutlet UILabel * valueLabel;
 @property (nonatomic, weak) IBOutlet UISlider * hueSlider;
@@ -163,12 +164,25 @@
 
 - (void)UniversalBluetoothDidConnect:(UniversalBluetooth *)UniversalBluetooth
 {
-    [self showConnectingView];
+    self.connectCountLabel.text = [[NSString alloc] initWithFormat:@"%lu", (unsigned long)UniversalBluetooth.peripherals.count];
+    
+    if(UniversalBluetooth.peripherals.count == 1) {
+        [self showConnectingView];
+    }
 }
 
 - (void)UniversalBluetoothDidDisconnect:(UniversalBluetooth *)UniversalBluetooth
 {
-    [self showDisconnectedView];
+    self.connectCountLabel.text = [[NSString alloc] initWithFormat:@"%lu", (unsigned long)UniversalBluetooth.peripherals.count];
+    
+    if(UniversalBluetooth.peripherals.count == 0) {
+        [self showDisconnectedView];
+    }
+}
+
+- (void)UniversalBluetoothDidDisconnect:(UniversalBluetooth *)UniversalBluetooth peripheral:(UniversalBluetoothPeripheral *)peripheral
+{
+    self.connectCountLabel.text = [[NSString alloc] initWithFormat:@"%lu", (unsigned long)UniversalBluetooth.peripherals.count];
 }
 
 - (void)UniversalBluetooth:(UniversalBluetooth *)UniversalBluetooth didReceiveObject:(NSDictionary *)object

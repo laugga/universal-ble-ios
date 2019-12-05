@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,6 +24,12 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="h 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="iqd-76-lQ5" userLabel="Lux Label">
                                         <rect key="frame" x="25" y="301" width="325" height="89"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="65"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="dn4-Pv-7C7" userLabel="Lux Label">
+                                        <rect key="frame" x="167.5" y="32" width="40" height="89"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="65"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -57,11 +61,13 @@
                                     <constraint firstItem="WYe-mi-pPy" firstAttribute="top" secondItem="iqd-76-lQ5" secondAttribute="bottom" constant="16" id="Id0-Kn-ctl"/>
                                     <constraint firstAttribute="trailing" secondItem="iqd-76-lQ5" secondAttribute="trailing" constant="25" id="KhH-OM-VKN"/>
                                     <constraint firstItem="jI7-Yf-v1s" firstAttribute="trailing" secondItem="Tgo-r0-EOy" secondAttribute="trailing" id="NQc-XP-i81"/>
+                                    <constraint firstItem="dn4-Pv-7C7" firstAttribute="centerX" secondItem="yVq-Mk-1V0" secondAttribute="centerX" id="OQ3-cW-Px6"/>
                                     <constraint firstItem="iqd-76-lQ5" firstAttribute="leading" secondItem="yVq-Mk-1V0" secondAttribute="leading" constant="25" id="Poh-Jg-sZI"/>
                                     <constraint firstItem="Tgo-r0-EOy" firstAttribute="trailing" secondItem="iqd-76-lQ5" secondAttribute="trailing" id="Pus-Pc-P1U"/>
                                     <constraint firstItem="Tgo-r0-EOy" firstAttribute="centerX" secondItem="iqd-76-lQ5" secondAttribute="centerX" id="ahJ-Vz-4Bt"/>
                                     <constraint firstItem="WYe-mi-pPy" firstAttribute="trailing" secondItem="iqd-76-lQ5" secondAttribute="trailing" id="cyu-Yi-05e"/>
                                     <constraint firstItem="jI7-Yf-v1s" firstAttribute="top" secondItem="Tgo-r0-EOy" secondAttribute="bottom" constant="16" id="dgZ-9r-DlN"/>
+                                    <constraint firstItem="dn4-Pv-7C7" firstAttribute="top" secondItem="yVq-Mk-1V0" secondAttribute="top" constant="32" id="glj-o3-Vy2"/>
                                     <constraint firstItem="Tgo-r0-EOy" firstAttribute="leading" secondItem="iqd-76-lQ5" secondAttribute="leading" id="ibJ-I9-gyz"/>
                                     <constraint firstItem="WYe-mi-pPy" firstAttribute="leading" secondItem="iqd-76-lQ5" secondAttribute="leading" id="w8b-6H-O04"/>
                                 </constraints>
@@ -135,6 +141,7 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="connectCountLabel" destination="dn4-Pv-7C7" id="nUe-vo-vGH"/>
                         <outlet property="connectedView" destination="yVq-Mk-1V0" id="mfq-IM-9u7"/>
                         <outlet property="connectingView" destination="gPS-NS-FFD" id="B9Q-yT-6DK"/>
                         <outlet property="disconnectedMessageLabel" destination="OC0-BJ-1rx" id="1Kc-9a-Ebb"/>

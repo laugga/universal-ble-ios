@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3803A8062399B89F0053F671 /* UniversalBluetoothPeripheral.h in Headers */ = {isa = PBXBuildFile; fileRef = 3803A8042399B89E0053F671 /* UniversalBluetoothPeripheral.h */; };
+		3803A8072399B89F0053F671 /* UniversalBluetoothPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 3803A8052399B89E0053F671 /* UniversalBluetoothPeripheral.m */; };
 		3819B8B21E085679000CC706 /* UniversalBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3819B8A91E085679000CC706 /* UniversalBluetooth.framework */; };
 		3819B8E41E085832000CC706 /* UniversalBluetooth.h in Headers */ = {isa = PBXBuildFile; fileRef = 3819B8A01E08557B000CC706 /* UniversalBluetooth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3819B8E61E08599A000CC706 /* UniversalBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819B8A11E08557B000CC706 /* UniversalBluetooth.m */; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3803A8042399B89E0053F671 /* UniversalBluetoothPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UniversalBluetoothPeripheral.h; path = "deps/universal-bluetooth-macos/lib/UniversalBluetoothPeripheral.h"; sourceTree = SOURCE_ROOT; };
+		3803A8052399B89E0053F671 /* UniversalBluetoothPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UniversalBluetoothPeripheral.m; path = "deps/universal-bluetooth-macos/lib/UniversalBluetoothPeripheral.m"; sourceTree = SOURCE_ROOT; };
 		3819B8A01E08557B000CC706 /* UniversalBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UniversalBluetooth.h; path = "deps/universal-bluetooth-macos/lib/UniversalBluetooth.h"; sourceTree = SOURCE_ROOT; };
 		3819B8A11E08557B000CC706 /* UniversalBluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UniversalBluetooth.m; path = "deps/universal-bluetooth-macos/lib/UniversalBluetooth.m"; sourceTree = SOURCE_ROOT; };
 		3819B8A91E085679000CC706 /* UniversalBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UniversalBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +240,8 @@
 			children = (
 				3819B8A01E08557B000CC706 /* UniversalBluetooth.h */,
 				3819B8A11E08557B000CC706 /* UniversalBluetooth.m */,
+				3803A8042399B89E0053F671 /* UniversalBluetoothPeripheral.h */,
+				3803A8052399B89E0053F671 /* UniversalBluetoothPeripheral.m */,
 			);
 			name = Library;
 			path = lib;
@@ -262,6 +268,7 @@
 				3819B8F81E0859BB000CC706 /* sbuffer.h in Headers */,
 				3819B8FF1E0859BB000CC706 /* zbuffer.h in Headers */,
 				3819B8FE1E0859BB000CC706 /* vrefbuffer.h in Headers */,
+				3803A8062399B89F0053F671 /* UniversalBluetoothPeripheral.h in Headers */,
 				3819B8E91E0859B6000CC706 /* NSData+MessagePack.h in Headers */,
 				3819B8EE1E0859B6000CC706 /* MessagePackPacker.h in Headers */,
 				3819B8FD1E0859BB000CC706 /* version.h in Headers */,
@@ -339,6 +346,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = A06ACB1A1608B2C200E20441;
@@ -375,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3819B9041E0859BB000CC706 /* version.c in Sources */,
+				3803A8072399B89F0053F671 /* UniversalBluetoothPeripheral.m in Sources */,
 				3819B8E61E08599A000CC706 /* UniversalBluetooth.m in Sources */,
 				3819B8E81E0859B6000CC706 /* NSArray+MessagePack.m in Sources */,
 				3819B9061E0859BB000CC706 /* zone.c in Sources */,
